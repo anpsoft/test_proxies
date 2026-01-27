@@ -1,0 +1,7 @@
+# Пример файла с прокси
+# Каждая строка - один прокси
+
+vless://ca9ac6fc-7269-42c9-8e48-18d8f0449750@uae.panelmarzban.com:3040?security=reality&type=tcp&sni=refersion.com&pbk=21V_VkMUD2XRbyRDg7hjpblUAwxHvlLmbarATdhhJQI&fp=chrome#AE
+ss://chacha20-ietf-poly1305:5c9c8c20877eccc2@109.61.18.99:23658#AE
+trojan://testme@212.113.119.31:2025?security=none&type=ws&host=vkvd127.mycdn.me&path=%2F&ed=2048&eh=Sec-Websocket-Protocol&fp=chrome#AT
+vmess://6df7d56f-4953-4a10-be2e-a88cc9f94e48@154.26.153.173:28686?type=tcp&security=none&fp=chrome&encryption=auto

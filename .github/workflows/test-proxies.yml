@@ -1,0 +1,56 @@
+name: Test Proxies
+ 
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - 'in/**'
+      - 'option.ini'
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install requests urllib3
+      
+      - name: Download sing-box
+        run: |
+          SINGBOX_VERSION="1.10.6"
+          wget -q "https://github.com/SagerNet/sing-box/releases/download/v${SINGBOX_VERSION}/sing-box-${SINGBOX_VERSION}-linux-amd64.tar.gz"
+          tar -xzf "sing-box-${SINGBOX_VERSION}-linux-amd64.tar.gz"
+          mv "sing-box-${SINGBOX_VERSION}-linux-amd64/sing-box" ./sing-box
+          chmod +x ./sing-box
+          ./sing-box version
+      
+      - name: Create directories
+        run: |
+          mkdir -p in out
+      
+      - name: Run proxy tests
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python test_proxies.py
+      
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: out/
+          retention-days: 7
