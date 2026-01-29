@@ -36,6 +36,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install requests urllib3
+          pip install requests urllib3 PySocks  
       
       - name: Download sing-box
         run: |
