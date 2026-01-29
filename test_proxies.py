@@ -29,19 +29,31 @@ class FastProxyTester:
         self.threads = self.config.getint('test', 'threads', fallback=5)
         self.batch_size = self.config.getint('test', 'batch_size', fallback=50)
         
+        self.is_windows = os.name == 'nt'
+                
         # Путь к sing-box
-        configured_path = self.config.get('paths', 'singbox_path', fallback='').strip()
-        if configured_path:
-            self.singbox_path = configured_path
+        if self.is_windows:
+            # Только на Windows читаем путь из ini
+            configured_path = self.config.get('paths', 'singbox_path', fallback='').strip()
+            if configured_path:
+                self.singbox_path = configured_path
+            else:
+                self.singbox_path = 'sing-box.exe'
         else:
-            # По умолчанию в текущей папке
-            self.singbox_path = 'sing-box.exe' if os.name == 'nt' else './sing-box'
+            # На Linux всегда ./sing-box
+            self.singbox_path = './sing-box'
+        
+        print(f"⚙️  Используем: {self.singbox_path}")                
+                    
+                
+            
+            
         
         self.bot_token = os.environ.get('TELEGRAM_BOT_TOKEN')
         self.chat_id = os.environ.get('TELEGRAM_CHAT_ID')
         
         self.stats = {}
-        self.is_windows = os.name == 'nt'
+
     
     
     def parse_proxy_url(self, url):
