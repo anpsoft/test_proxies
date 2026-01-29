@@ -475,6 +475,17 @@ class FastProxyTester:
         for attempt in range(self.attempts):
             try:
                 start_time = time.time()
+                
+                # ОТЛАДКА: какая схема используется
+                proxy_dict = {
+                    'http': f'socks5://127.0.0.1:{port}',
+                    'https': f'socks5://127.0.0.1:{port}'
+                }
+                print(f"  🐛 DEBUG proxy_dict: {proxy_dict}")                
+                    
+                    
+                
+                
                 response = requests.get(
                     self.test_url,
                     proxies={

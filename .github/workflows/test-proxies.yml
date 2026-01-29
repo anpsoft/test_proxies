@@ -62,7 +62,12 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          python test_proxies.py
+          # python test_proxies.py
+          # Добавляем дебаг
+          export DEBUG=1
+          python test_proxies.py 2>&1 | head -100  # Покажи первые 100 строк лога
+
+      
       
       - name: Upload results to artifacts
         uses: actions/upload-artifact@v4
