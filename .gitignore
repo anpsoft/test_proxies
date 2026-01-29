@@ -1,25 +1,27 @@
 # Результаты тестов
 out/
-
+ 
 # Python
 __pycache__/
 *.py[cod]
 *.so
 *.egg-info/
-
+ 
 # Временные файлы
 *.tmp
 /tmp/
-
+ 
 # sing-box
 sing-box
 sing-box-*
-
+ 
 # IDE
 .vscode/
 .idea/
 *.swp
-
+ 
 # Системные
 .DS_Store
 Thumbs.db
+ 
+ *.rar
