@@ -70,6 +70,9 @@ class FastProxyTester:
             
             if protocol == 'vless':
                 return self._parse_vless(url, parsed)
+                    
+                
+                
             elif protocol == 'vmess':
                 return self._parse_vmess(url, parsed)
             elif protocol == 'trojan':
@@ -96,6 +99,9 @@ class FastProxyTester:
         }
         
         network = query.get('type', ['tcp'])[0]
+        
+        if network in ['xhttp', 'httpupgrade', 'vision', 'splithttp']:
+            return None
         
         if network == "ws":
             config["transport"] = {
