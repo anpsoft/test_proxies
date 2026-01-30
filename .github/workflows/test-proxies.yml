@@ -13,7 +13,7 @@ on:
       - 'test_proxies.py'
   workflow_dispatch:
   schedule:
-    - cron: '0 */6 * * *'  # Каждые 6 часов
+    # - cron: '0 */6 * * *'  # Каждые 6 часов
 
 jobs:
   test:
@@ -57,6 +57,14 @@ jobs:
             echo "⚠️ Папка in пуста, создаем пример"
             echo "vless://uuid@example.com:443?security=tls&sni=example.com#Пример" > in/example.txt
           fi
+          
+      - name: Test sing-box
+        run: |
+          ./sing-box version
+          # Тестовый запуск с минимальным конфигом
+          echo '{"log":{"level":"info"},"inbounds":[{"type":"mixed","listen":"127.0.0.1","listen_port":1080}]}' > test-config.json
+          timeout 5s ./sing-box run -c test-config.json || echo "Sing-box test failed"
+          rm -f test-config.json          
       
       - name: Run proxy tests
         env:
@@ -67,8 +75,9 @@ jobs:
           # Добавляем дебаг
           export DEBUG=1
           python test_proxies.py 2>&1 | head -100  # Покажи первые 100 строк лога
-
-      
+          # Показываем последние 200 строк если упало
+          tail -200 test_log.txt
+            
       
       - name: Upload results to artifacts
         uses: actions/upload-artifact@v4

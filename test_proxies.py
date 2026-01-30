@@ -401,7 +401,7 @@ class FastProxyTester:
                     
            
             # Даем время на запуск
-            time.sleep(3)
+            time.sleep(5)
             
             if process.poll() is not None:
                 stderr = process.stderr.read()
@@ -481,7 +481,8 @@ class FastProxyTester:
                     'http': f'socks5://127.0.0.1:{port}',
                     'https': f'socks5://127.0.0.1:{port}'
                 }
-                print(f"  🐛 DEBUG proxy_dict: {proxy_dict}")                
+                
+                #print(f"  🐛 DEBUG proxy_dict: {proxy_dict}")                
                     
                     
                 
