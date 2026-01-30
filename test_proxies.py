@@ -100,7 +100,7 @@ class FastProxyTester:
         
         network = query.get('type', ['tcp'])[0]
         
-        if network in ['xhttp', 'httpupgrade', 'vision', 'splithttp']:
+        if network in ['xhttp', 'httpupgrade', 'vision', 'splithttp', 'kcp']:
             return None
         
         if network == "ws":
@@ -173,6 +173,10 @@ class FastProxyTester:
                 }
                 
                 net = vmess_config.get('net', 'tcp')
+                
+                if net in ['kcp', 'quic']:  # VMess тоже может иметь kcp
+                    return None
+                
                 if net == 'ws':
                     config["transport"] = {
                         "type": "ws",
@@ -369,7 +373,9 @@ class FastProxyTester:
             return []
         
         # Создаем конфиг для всей пачки
-        base_port = 20000 + (batch_num - 1) * 1000
+        #base_port = 20000 + (batch_num - 1) * 1000
+        base_port = 10000 + (batch_num - 1) * self.batch_size
+        
         batch_config = self.create_batch_config(proxy_configs, base_port)
         
         # Сохраняем конфиг
