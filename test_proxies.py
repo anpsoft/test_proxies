@@ -168,8 +168,8 @@ class FastProxyTester:
                     "server": vmess_config.get('add'),
                     "server_port": int(vmess_config.get('port', 443)),
                     "uuid": vmess_config.get('id'),
-                    "security": vmess_config.get('scy', 'auto'),
-                    "alterId": int(vmess_config.get('aid', 0))
+                    "security": vmess_config.get('scy', 'auto')
+                    # "alterId": int(vmess_config.get('aid', 0))
                 }
                 
                 net = vmess_config.get('net', 'tcp')
@@ -200,8 +200,8 @@ class FastProxyTester:
             "server": parsed.hostname,
             "server_port": int(parsed.port) if parsed.port else 443,
             "uuid": parsed.username,
-            "security": "auto",
-            "alterId": 0
+            "security": "auto"
+            # "alterId": 0
         }
         
         if query.get('type', ['tcp'])[0] == 'ws':
@@ -380,41 +380,7 @@ class FastProxyTester:
         process = None
         results = []
         
-        # try:
-            # # Запускаем sing-box один раз для всей пачки
-            # startupinfo = None
-            # if self.is_windows:
-                # startupinfo = subprocess.STARTUPINFO()
-                # startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-                # startupinfo.wShowWindow = subprocess.SW_HIDE
-            
-            # print(f"  🚀 Запускаю sing-box (порты {base_port}-{base_port + len(proxy_urls) - 1})...")
-            
-            # process = subprocess.Popen(
-                # [self.singbox_path, 'run', '-c', config_file],
-                # stdout=subprocess.PIPE,
-                # stderr=subprocess.PIPE,
-                # startupinfo=startupinfo,
-                # text=True,
-                # encoding='utf-8'
-            # )
-            
-     
-           
-            # # # Даем время на запуск
-            # # time.sleep(5)
-            
-            # # if process.poll() is not None:
-                # # stderr = process.stderr.read()
-                # # print(f"  ❌ Sing-box не запустился: {stderr[:200]}")
-                # # return []
-                
-                
-                
-                
-            
-            # print(f"  ✅ Sing-box запущен, тестирую...")
-            
+
             
             
         try:
