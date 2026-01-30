@@ -8,7 +8,7 @@ on:
   # schedule:
     # - cron: '0 */6 * * *'  # Каждые 6 часов
 
-#timeout-minutes: 10  # лимит времени для всего workflow
+
  
 jobs:
   test:
@@ -17,7 +17,7 @@ jobs:
     permissions:
       contents: write  # Добавляем permission для записи в репозиторий
     
-    timeout-minutes: 10 
+    timeout-minutes: 60 
     
     steps:
       - name: Checkout repository
