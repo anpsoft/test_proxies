@@ -4,17 +4,12 @@ name: Test Proxies
  
 on:
   push:
-    # branches:
-      # - main
-      # - master
-    # paths:
-      # - 'in/**'
-      # - 'option.ini'
-      # - 'test_proxies.py'
   # workflow_dispatch:
   # schedule:
     # - cron: '0 */6 * * *'  # Каждые 6 часов
 
+timeout-minutes: 10  # лимит времени для всего workflow
+ 
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -58,26 +53,21 @@ jobs:
             echo "vless://uuid@example.com:443?security=tls&sni=example.com#Пример" > in/example.txt
           fi
           
-      - name: Test sing-box
-        run: |
-          ./sing-box version
-          # Тестовый запуск с минимальным конфигом
-          echo '{"log":{"level":"info"},"inbounds":[{"type":"mixed","listen":"127.0.0.1","listen_port":1080}]}' > test-config.json
-          timeout 5s ./sing-box run -c test-config.json || echo "Sing-box test failed"
-          rm -f test-config.json          
+      # - name: Test sing-box
+        # run: |
+          # ./sing-box version
+          # # Тестовый запуск с минимальным конфигом
+          # echo '{"log":{"level":"info"},"inbounds":[{"type":"mixed","listen":"127.0.0.1","listen_port":1080}]}' > test-config.json
+          # timeout 5s ./sing-box run -c test-config.json || echo "Sing-box test failed"
+          # rm -f test-config.json          
       
       - name: Run proxy tests
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          # python test_proxies.py
-          # Добавляем дебаг
           export DEBUG=1
-          python test_proxies.py 2>&1 | head -100  # Покажи первые 100 строк лога
-          # Показываем последние 200 строк если упало
-          tail -200 test_log.txt
-            
+          python test_proxies.py
       
       - name: Upload results to artifacts
         uses: actions/upload-artifact@v4
