@@ -1,5 +1,5 @@
 # Результаты тестов
-out/
+#out/
  
 # Python
 __pycache__/
