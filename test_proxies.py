@@ -380,41 +380,87 @@ class FastProxyTester:
         process = None
         results = []
         
+        # try:
+            # # Запускаем sing-box один раз для всей пачки
+            # startupinfo = None
+            # if self.is_windows:
+                # startupinfo = subprocess.STARTUPINFO()
+                # startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+                # startupinfo.wShowWindow = subprocess.SW_HIDE
+            
+            # print(f"  🚀 Запускаю sing-box (порты {base_port}-{base_port + len(proxy_urls) - 1})...")
+            
+            # process = subprocess.Popen(
+                # [self.singbox_path, 'run', '-c', config_file],
+                # stdout=subprocess.PIPE,
+                # stderr=subprocess.PIPE,
+                # startupinfo=startupinfo,
+                # text=True,
+                # encoding='utf-8'
+            # )
+            
+     
+           
+            # # # Даем время на запуск
+            # # time.sleep(5)
+            
+            # # if process.poll() is not None:
+                # # stderr = process.stderr.read()
+                # # print(f"  ❌ Sing-box не запустился: {stderr[:200]}")
+                # # return []
+                
+                
+                
+                
+            
+            # print(f"  ✅ Sing-box запущен, тестирую...")
+            
+            
+            
         try:
-            # Запускаем sing-box один раз для всей пачки
+            # Retry логика при занятых портах
             startupinfo = None
             if self.is_windows:
                 startupinfo = subprocess.STARTUPINFO()
                 startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
                 startupinfo.wShowWindow = subprocess.SW_HIDE
             
-            print(f"  🚀 Запускаю sing-box (порты {base_port}-{base_port + len(proxy_urls) - 1})...")
+            MAX_RETRIES = 3
+            process = None
             
-            process = subprocess.Popen(
-                [self.singbox_path, 'run', '-c', config_file],
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
-                startupinfo=startupinfo,
-                text=True,
-                encoding='utf-8'
-            )
+            for retry in range(MAX_RETRIES):
+                print(f"  🚀 Запускаю sing-box (порты {base_port}-{base_port + len(proxy_urls) - 1})...")
+                
+                process = subprocess.Popen(
+                    [self.singbox_path, 'run', '-c', config_file],
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                    startupinfo=startupinfo,
+                    text=True,
+                    encoding='utf-8'
+                )
+                
+                time.sleep(0.5)
+                
+                if process.poll() is not None:
+                    stderr = process.stderr.read()
+                    if "address already in use" in stderr and retry < MAX_RETRIES - 1:
+                        print(f"  ⚠️ Порт занят, повтор {retry+2}/{MAX_RETRIES}...")
+                        time.sleep(2)
+                        continue
+                    else:
+                        print(f"  ❌ Не запустился: {stderr[:200]}")
+                        break
+                else:
+                    time.sleep(2.5)
+                    break
             
-            # process = subprocess.Popen(
-                # [self.singbox_path, 'run', '-c', config_file],
-                # stdout=subprocess.PIPE,
-                # stderr=subprocess.PIPE
-            # )
-                    
-           
-            # Даем время на запуск
-            time.sleep(5)
-            
-            if process.poll() is not None:
-                stderr = process.stderr.read()
-                print(f"  ❌ Sing-box не запустился: {stderr[:200]}")
+            if process is None or process.poll() is not None:
                 return []
             
-            print(f"  ✅ Sing-box запущен, тестирую...")
+            print(f"  ✅ Sing-box запущен, тестирую...")            
+            
+            
             
             # Тестируем каждый валидный прокси
             with concurrent.futures.ThreadPoolExecutor(max_workers=self.threads) as executor:
