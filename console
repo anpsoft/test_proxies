@@ -1,0 +1,145 @@
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16000
+INFO sing-box started (0.166s)
+INFO [2001252802 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:14813
+INFO [2001252802 96ms] inbound/socks[socks-in]: inbound connection to 18.210.19.100:443
+INFO [2001252802 96ms] outbound/vless[proxy]: outbound connection to 18.210.19.100:443
+INFO [2001252802 145ms] outbound/vless[proxy]: outbound connection to 18.210.19.100:443
+ERROR [2001252802 498ms] connection: connection download closed: read tcp 192.168.100.3:14814->144.31.178.150:1080: wsarecv: An existing connection was forcibly closed by the remote host.
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16001
+INFO sing-box started (0.166s)
+INFO [677156521 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:14823
+INFO [677156521 15ms] inbound/socks[socks-in]: inbound connection to 18.210.19.100:443
+INFO [677156521 15ms] outbound/vless[proxy]: outbound connection to 18.210.19.100:443
+ERROR [677156521 58ms] connection: open connection to 18.210.19.100:443 using outbound/vless[proxy]: lookup osn.takovpn.ru: (exchange4: osn.takovpn.ru.: dial udp 192.168.100.1:53: SETSOCKOPT IP_MTU_DISCOVER IP_PMTUDISC_DO: An unknown, invalid, or unsupported option or level was specified in a getsockopt or setsockopt call. | exchange6: osn.takovpn.ru.: dial udp 192.168.100.1:53: SETSOCKOPT IP_MTU_DISCOVER IP_PMTUDISC_DO: An unknown, invalid, or unsupported option or level was specified in a getsockopt or setsockopt call.)
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16002
+INFO sing-box started (0.155s)
+INFO [3591319801 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:14831
+INFO [3591319801 9ms] inbound/socks[socks-in]: inbound connection to 18.210.19.100:443
+INFO [3591319801 9ms] outbound/vless[proxy]: outbound connection to 18.210.19.100:443
+ERROR [3591319801 41ms] connection: open connection to 18.210.19.100:443 using outbound/vless[proxy]: lookup srv30.outlinekeys.com: (exchange6: srv30.outlinekeys.com.: dial udp 192.168.100.1:53: SETSOCKOPT IP_MTU_DISCOVER IP_PMTUDISC_DO: An unknown, invalid, or unsupported option or level was specified in a getsockopt or setsockopt call. | exchange4: srv30.outlinekeys.com.: dial udp 192.168.100.1:53: SETSOCKOPT IP_MTU_DISCOVER IP_PMTUDISC_DO: An unknown, invalid, or unsupported option or level was specified in a getsockopt or setsockopt call.)
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16003
+INFO sing-box started (0.155s)
+INFO [2019906592 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:14838
+INFO [2019906592 30ms] inbound/socks[socks-in]: inbound connection to 18.210.19.100:443
+INFO [2019906592 35ms] outbound/vless[proxy]: outbound connection to 18.210.19.100:443
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16004
+INFO sing-box started (0.166s)
+INFO [432490079 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:14857
+INFO [432490079 8ms] inbound/socks[socks-in]: inbound connection to 18.210.19.100:443
+INFO [432490079 9ms] outbound/vless[proxy]: outbound connection to 18.210.19.100:443
+INFO [432490079 604ms] outbound/vless[proxy]: outbound connection to 18.210.19.100:443
+ERROR [432490079 944ms] connection: connection download closed: unknown version: 72
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16005
+INFO sing-box started (0.155s)
+INFO [3201615187 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:14868
+INFO [3201615187 7ms] inbound/socks[socks-in]: inbound connection to 18.210.19.100:443
+INFO [3201615187 8ms] outbound/vless[proxy]: outbound connection to 18.210.19.100:443
+ERROR [3201615187 681ms] connection: open connection to 18.210.19.100:443 using outbound/vless[proxy]: tls: failed to verify certificate: x509: certificate is valid for *.google.com, *.appengine.google.com, *.bdn.dev, *.origin-test.bdn.dev, *.cloud.google.com, *.crowdsource.google.com, *.datacompute.google.com, *.google.ca, *.google.cl, *.google.co.in, *.google.co.jp, *.google.co.uk, *.google.com.ar, *.google.com.au, *.google.com.br, *.google.com.co, *.google.com.mx, *.google.com.tr, *.google.com.vn, *.google.de, *.google.es, *.google.fr, *.google.hu, *.google.it, *.google.nl, *.google.pl, *.google.pt, *.googleapis.cn, *.googlevideo.com, *.gstatic.cn, *.gstatic-cn.com, googlecnapps.cn, *.googlecnapps.cn, googleapps-cn.com, *.googleapps-cn.com, gkecnapps.cn, *.gkecnapps.cn, googledownloads.cn, *.googledownloads.cn, recaptcha.net.cn, *.recaptcha.net.cn, recaptcha-cn.net, *.recaptcha-cn.net, widevine.cn, *.widevine.cn, ampproject.org.cn, *.ampproject.org.cn, ampproject.net.cn, *.ampproject.net.cn, google-analytics-cn.com, *.google-analytics-cn.com, googleadservices-cn.com, *.googleadservices-cn.com, googlevads-cn.com, *.googlevads-cn.com, googleapis-cn.com, *.googleapis-cn.com, googleoptimize-cn.com, *.googleoptimize-cn.com, doubleclick-cn.net, *.doubleclick-cn.net, *.fls.doubleclick-cn.net, *.g.doubleclick-cn.net, doubleclick.cn, *.doubleclick.cn, *.fls.doubleclick.cn, *.g.doubleclick.cn, dartsearch-cn.net, *.dartsearch-cn.net, googletraveladservices-cn.com, *.googletraveladservices-cn.com, googletagservices-cn.com, *.googletagservices-cn.com, googletagmanager-cn.com, *.googletagmanager-cn.com, googlesyndication-cn.com, *.googlesyndication-cn.com, *.safeframe.googlesyndication-cn.com, app-measurement-cn.com, *.app-measurement-cn.com, gvt1-cn.com, *.gvt1-cn.com, gvt2-cn.com, *.gvt2-cn.com, 2mdn-cn.net, *.2mdn-cn.net, googleflights-cn.net, *.googleflights-cn.net, admob-cn.com, *.admob-cn.com, *.gemini.cloud.google.com, googlesandbox-cn.com, *.googlesandbox-cn.com, *.safenup.googlesandbox-cn.com, *.gstatic.com, *.metric.gstatic.com, *.gvt1.com, *.gcpcdn.gvt1.com, *.gvt2.com, *.gcp.gvt2.com, *.url.google.com, *.youtube-nocookie.com, *.ytimg.com, ai.android, android.com, *.android.com, *.flash.android.com, g.cn, *.g.cn, g.co, *.g.co, goo.gl, www.goo.gl, google-analytics.com, *.google-analytics.com, google.com, googlecommerce.com, *.googlecommerce.com, ggpht.cn, *.ggpht.cn, urchin.com, *.urchin.com, youtu.be, youtube.com, *.youtube.com, music.youtube.com, *.music.youtube.com, youtubeeducation.com, *.youtubeeducation.com, youtubekids.com, *.youtubekids.com, yt.be, *.yt.be, android.clients.google.com, *.android.google.cn, *.chrome.google.cn, *.developers.google.cn, *.aistudio.google.com, not stackoverflow.com
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16006
+INFO sing-box started (0.177s)
+INFO [3926241231 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:14877
+INFO [3926241231 8ms] inbound/socks[socks-in]: inbound connection to 18.210.19.100:443
+INFO [3926241231 8ms] outbound/vless[proxy]: outbound connection to 18.210.19.100:443
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16007
+INFO sing-box started (0.188s)
+INFO [1308070240 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:14896
+INFO [1308070240 10ms] inbound/socks[socks-in]: inbound connection to 18.210.19.100:443
+INFO [1308070240 11ms] outbound/vless[proxy]: outbound connection to 18.210.19.100:443
+ERROR [1308070240 45ms] connection: open connection to 18.210.19.100:443 using outbound/vless[proxy]: lookup chatgpt.com: (exchange4: chatgpt.com.: dial udp 192.168.100.1:53: SETSOCKOPT IP_MTU_DISCOVER IP_PMTUDISC_DO: An unknown, invalid, or unsupported option or level was specified in a getsockopt or setsockopt call. | exchange6: chatgpt.com.: dial udp 192.168.100.1:53: SETSOCKOPT IP_MTU_DISCOVER IP_PMTUDISC_DO: An unknown, invalid, or unsupported option or level was specified in a getsockopt or setsockopt call.)
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16008
+INFO sing-box started (0.166s)
+INFO [4194624075 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:14903
+INFO [4194624075 11ms] inbound/socks[socks-in]: inbound connection to 18.210.19.100:443
+INFO [4194624075 11ms] outbound/vless[proxy]: outbound connection to 18.210.19.100:443
+ERROR [4194624075 61ms] connection: open connection to 18.210.19.100:443 using outbound/vless[proxy]: lookup mailru.outlinekeys.net: (exchange4: mailru.outlinekeys.net.: dial udp 192.168.100.1:53: SETSOCKOPT IP_MTU_DISCOVER IP_PMTUDISC_DO: An unknown, invalid, or unsupported option or level was specified in a getsockopt or setsockopt call. | exchange6: mailru.outlinekeys.net.: dial udp 192.168.100.1:53: SETSOCKOPT IP_MTU_DISCOVER IP_PMTUDISC_DO: An unknown, invalid, or unsupported option or level was specified in a getsockopt or setsockopt call.)
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16009
+INFO sing-box started (0.255s)
+INFO [3585468716 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:14910
+INFO [3585468716 6ms] inbound/socks[socks-in]: inbound connection to 18.210.19.100:443
+INFO [3585468716 8ms] outbound/vless[proxy]: outbound connection to 18.210.19.100:443
+INFO [3585468716 634ms] outbound/vless[proxy]: outbound connection to 18.210.19.100:443
+ERROR [3585468716 1.0s] connection: connection download closed: unknown version: 72
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16010
+INFO sing-box started (0.166s)
+INFO [4121245879 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:14922
+INFO [4121245879 28ms] inbound/socks[socks-in]: inbound connection to 18.210.19.100:443
+INFO [4121245879 28ms] outbound/vless[proxy]: outbound connection to 18.210.19.100:443
+ERROR [4121245879 58ms] connection: open connection to 18.210.19.100:443 using outbound/vless[proxy]: lookup tbankru.outlinekeys.net: (exchange4: tbankru.outlinekeys.net.: dial udp 192.168.100.1:53: SETSOCKOPT IP_MTU_DISCOVER IP_PMTUDISC_DO: An unknown, invalid, or unsupported option or level was specified in a getsockopt or setsockopt call. | exchange6: tbankru.outlinekeys.net.: dial udp 192.168.100.1:53: SETSOCKOPT IP_MTU_DISCOVER IP_PMTUDISC_DO: An unknown, invalid, or unsupported option or level was specified in a getsockopt or setsockopt call.)
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16011
+INFO sing-box started (0.188s)
+INFO [28846794 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:14929
+INFO [28846794 0ms] inbound/socks[socks-in]: inbound connection to 18.210.19.100:443
+INFO [28846794 0ms] outbound/vless[proxy]: outbound connection to 18.210.19.100:443
+INFO [28846794 694ms] outbound/vless[proxy]: outbound connection to 18.210.19.100:443
+ERROR [28846794 1.8s] connection: connection download closed: unknown version: 72
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16012
+INFO sing-box started (0.199s)
+INFO [3247346384 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:14941
+INFO [3247346384 9ms] inbound/socks[socks-in]: inbound connection to 18.210.19.100:443
+INFO [3247346384 9ms] outbound/vless[proxy]: outbound connection to 18.210.19.100:443
+ERROR [3247346384 44ms] connection: open connection to 18.210.19.100:443 using outbound/vless[proxy]: lookup srv25.outlinekeys.com: (exchange6: srv25.outlinekeys.com.: dial udp 192.168.100.1:53: SETSOCKOPT IP_MTU_DISCOVER IP_PMTUDISC_DO: An unknown, invalid, or unsupported option or level was specified in a getsockopt or setsockopt call. | exchange4: srv25.outlinekeys.com.: dial udp 192.168.100.1:53: SETSOCKOPT IP_MTU_DISCOVER IP_PMTUDISC_DO: An unknown, invalid, or unsupported option or level was specified in a getsockopt or setsockopt call.)
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16013
+INFO sing-box started (0.166s)
+INFO [75494776 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:14948
+INFO [75494776 6ms] inbound/socks[socks-in]: inbound connection to 18.210.19.100:443
+INFO [75494776 6ms] outbound/vless[proxy]: outbound connection to 18.210.19.100:443
+INFO [75494776 4.85s] outbound/vless[proxy]: outbound connection to 18.210.19.100:443
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16014
+INFO sing-box started (0.177s)
+INFO [351216678 15ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:14978
+INFO [351216678 71ms] inbound/socks[socks-in]: inbound connection to 52.54.223.68:443
+INFO [351216678 72ms] outbound/vless[proxy]: outbound connection to 52.54.223.68:443
+INFO [351216678 912ms] outbound/vless[proxy]: outbound connection to 52.54.223.68:443
+ERROR [351216678 1.30s] connection: connection download closed: unknown version: 72
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16015
+INFO sing-box started (0.155s)
+INFO [1526436536 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:14990
+INFO [1526436536 4ms] inbound/socks[socks-in]: inbound connection to 52.54.223.68:443
+INFO [1526436536 4ms] outbound/vless[proxy]: outbound connection to 52.54.223.68:443
+INFO [1526436536 526ms] outbound/vless[proxy]: outbound connection to 52.54.223.68:443
+ERROR [1526436536 855ms] connection: connection download closed: unknown version: 72
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16016
+INFO sing-box started (0.155s)
+INFO [3217384038 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:1031
+INFO [3217384038 8ms] inbound/socks[socks-in]: inbound connection to 52.54.223.68:443
+INFO [3217384038 8ms] outbound/vless[proxy]: outbound connection to 52.54.223.68:443
+ERROR [3217384038 55ms] connection: open connection to 52.54.223.68:443 using outbound/vless[proxy]: lookup maxru.outlinekeys.net: (exchange6: maxru.outlinekeys.net.: dial udp 192.168.100.1:53: SETSOCKOPT IP_MTU_DISCOVER IP_PMTUDISC_DO: An unknown, invalid, or unsupported option or level was specified in a getsockopt or setsockopt call. | exchange4: maxru.outlinekeys.net.: dial udp 192.168.100.1:53: SETSOCKOPT IP_MTU_DISCOVER IP_PMTUDISC_DO: An unknown, invalid, or unsupported option or level was specified in a getsockopt or setsockopt call.)
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16017
+INFO sing-box started (0.244s)
+INFO [1234003653 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:1040
+INFO [1234003653 13ms] inbound/socks[socks-in]: inbound connection to 52.54.223.68:443
+INFO [1234003653 14ms] outbound/vless[proxy]: outbound connection to 52.54.223.68:443
+INFO [1234003653 58ms] outbound/vless[proxy]: outbound connection to 52.54.223.68:443
+ERROR [1234003653 400ms] connection: connection download closed: read tcp 192.168.100.3:1041->95.163.210.225:443: wsarecv: An existing connection was forcibly closed by the remote host.
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16018
+INFO sing-box started (0.222s)
+INFO [2609916391 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:1050
+INFO [2609916391 15ms] inbound/socks[socks-in]: inbound connection to 52.54.223.68:443
+INFO [2609916391 16ms] outbound/vless[proxy]: outbound connection to 52.54.223.68:443
+ERROR [2609916391 399ms] connection: open connection to 52.54.223.68:443 using outbound/vless[proxy]: unexpected HTTP response status: 403
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16019
+INFO sing-box started (0.199s)
+INFO [1310840590 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:1059
+INFO [1310840590 14ms] inbound/socks[socks-in]: inbound connection to 52.54.223.68:443
+INFO [1310840590 14ms] outbound/vless[proxy]: outbound connection to 52.54.223.68:443
+ERROR [1310840590 57ms] connection: open connection to 52.54.223.68:443 using outbound/vless[proxy]: lookup mailru.outlinekeys.net: (exchange6: mailru.outlinekeys.net.: dial udp 192.168.100.1:53: SETSOCKOPT IP_MTU_DISCOVER IP_PMTUDISC_DO: An unknown, invalid, or unsupported option or level was specified in a getsockopt or setsockopt call. | exchange4: mailru.outlinekeys.net.: dial udp 192.168.100.1:53: SETSOCKOPT IP_MTU_DISCOVER IP_PMTUDISC_DO: An unknown, invalid, or unsupported option or level was specified in a getsockopt or setsockopt call.)
