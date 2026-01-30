@@ -599,6 +599,32 @@ class FastProxyTester:
         
         return all_working
     
+    
+    
+    def send_telegram_report(self):
+        """Отправка архива с результатами в Telegram"""
+        if not self.bot_token or not self.chat_id:
+            print("⚠️  Telegram токены не настроены")
+            return
+        
+        # Создаём архив
+        import zipfile
+        zip_path = 'out/results.zip'
+        with zipfile.ZipFile(zip_path, 'w') as zipf:
+            for file in Path('out').glob('*'):
+                if file.is_file() and file.suffix != '.zip':
+                    zipf.write(file, file.name)
+        
+        # Отправляем
+        url = f"https://api.telegram.org/bot{self.bot_token}/sendDocument"
+        with open(zip_path, 'rb') as f:
+            files = {'document': f}
+            data = {'chat_id': self.chat_id, 'caption': f"✅ Результаты: {len(self.stats)} файлов"}
+            requests.post(url, files=files, data=data)
+        
+        print("📤 Архив отправлен в Telegram")
+    
+    
     def run(self):
         """Основной процесс"""
         print("🚀 ЗАПУСК БЫСТРОГО ТЕСТИРОВАНИЯ")
@@ -655,6 +681,8 @@ class FastProxyTester:
             print(f"🏎️  Эффективность: {working_all/total_all*100:.1f}% рабочих")
         
         print(f"{'='*60}")
+        
+        self.send_telegram_report()  
 
 if __name__ == '__main__':
     tester = FastProxyTester()
