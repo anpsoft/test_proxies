@@ -53,6 +53,7 @@ class FastProxyTester:
         self.chat_id = os.environ.get('TELEGRAM_CHAT_ID')
         
         self.stats = {}
+        self.failed_batches = []  # новое
 
     
     
@@ -354,7 +355,7 @@ class FastProxyTester:
         
         return config
     
-    def test_batch_proxies(self, proxy_urls, batch_num, total_batches):
+    def test_batch_proxies(self, proxy_urls, batch_num, total_batches,  global_start_idx=0):
         """Тестировать пачку прокси в одном sing-box процессе"""
         print(f"\n🔧 Пакет {batch_num}/{total_batches} ({len(proxy_urls)} прокси)")
         
@@ -428,6 +429,7 @@ class FastProxyTester:
                     break
             
             if process is None or process.poll() is not None:
+                self.failed_batches.append(batch_num) 
                 return []
             
             print(f"  ✅ Sing-box запущен, тестирую...")            
@@ -452,9 +454,13 @@ class FastProxyTester:
                         results.append((i, proxy_url, success, delay, message))
                         
                         # Выводим результат
-                        proxy_id = proxy_url.split('@')[1].split(':')[0] if '@' in proxy_url else "unknown"
-                        print(f"  [{i+1:3d}] {proxy_id}: {message}")
+                        # proxy_id = proxy_url.split('@')[1].split(':')[0] if '@' in proxy_url else "unknown"
+                        # print(f"  [{i+1:3d}] {proxy_id}: {message}")
                         
+                        global_idx = global_start_idx + i + 1
+                        proxy_id = proxy_url.split('@')[1].split(':')[0] if '@' in proxy_url else "unknown"
+                        print(f"  [{global_idx:4d}] {proxy_id}: {message}")
+                                                
                     except concurrent.futures.TimeoutError:
                         proxy_id = proxy_url.split('@')[1].split(':')[0] if '@' in proxy_url else "unknown"
                         print(f"  [{i+1:3d}] {proxy_id}: ⏱️ Таймаут теста")
@@ -591,7 +597,7 @@ class FastProxyTester:
             end_idx = min(start_idx + self.batch_size, len(lines))
             batch = lines[start_idx:end_idx]
             
-            working = self.test_batch_proxies(batch, batch_num + 1, total_batches)
+            working = self.test_batch_proxies(batch, batch_num + 1, total_batches, start_idx)
             all_working.extend(working)
         
         file_elapsed = time.time() - file_start_time
@@ -701,8 +707,14 @@ class FastProxyTester:
         print(f"⏱️  Общее время: {elapsed_time:.1f} секунд")
         print(f"⚡ Скорость: {total_all/elapsed_time:.2f} прокси/сек")
         
+        
+        
         if total_all > 0:
             print(f"🏎️  Эффективность: {working_all/total_all*100:.1f}% рабочих")
+        
+        if self.failed_batches:
+            print(f"\n⚠️  Сбойных пачек: {len(self.failed_batches)}")
+            print(f"📋 Номера: {sorted(set(self.failed_batches))}")
         
         print(f"{'='*60}")
         
