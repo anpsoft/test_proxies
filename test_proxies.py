@@ -664,7 +664,7 @@ class FastProxyTester:
         print(f"⏱️  Таймаут: {self.max_delay}мс")
         print(f"🔄 Попыток: {self.attempts}")
         
-        # Проверяем sing-box
+        #  Проверяем sing-box
         if not os.path.exists(self.singbox_path):
             print(f"\n❌ {self.singbox_path} не найден!")
             print("Скачайте с: https://github.com/SagerNet/sing-box/releases")
