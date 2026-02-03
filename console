@@ -143,3 +143,112 @@ INFO [1310840590 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1
 INFO [1310840590 14ms] inbound/socks[socks-in]: inbound connection to 52.54.223.68:443
 INFO [1310840590 14ms] outbound/vless[proxy]: outbound connection to 52.54.223.68:443
 ERROR [1310840590 57ms] connection: open connection to 52.54.223.68:443 using outbound/vless[proxy]: lookup mailru.outlinekeys.net: (exchange6: mailru.outlinekeys.net.: dial udp 192.168.100.1:53: SETSOCKOPT IP_MTU_DISCOVER IP_PMTUDISC_DO: An unknown, invalid, or unsupported option or level was specified in a getsockopt or setsockopt call. | exchange4: mailru.outlinekeys.net.: dial udp 192.168.100.1:53: SETSOCKOPT IP_MTU_DISCOVER IP_PMTUDISC_DO: An unknown, invalid, or unsupported option or level was specified in a getsockopt or setsockopt call.)
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16000
+INFO sing-box started (0.166s)
+INFO [3507696557 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:8758
+INFO [3507696557 62ms] inbound/socks[socks-in]: inbound connection to 98.91.115.81:443
+INFO [3507696557 68ms] outbound/vless[proxy]: outbound connection to 98.91.115.81:443
+INFO [3507696557 416ms] outbound/vless[proxy]: outbound connection to 98.91.115.81:443
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16001
+INFO sing-box started (0.155s)
+INFO [2633304904 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:8771
+INFO [2633304904 15ms] inbound/socks[socks-in]: inbound connection to 98.91.115.81:443
+INFO [2633304904 15ms] outbound/vless[proxy]: outbound connection to 98.91.115.81:443
+INFO [2633304904 478ms] outbound/vless[proxy]: outbound connection to 98.91.115.81:443
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16002
+INFO sing-box started (0.177s)
+INFO [456534351 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:8786
+INFO [456534351 10ms] inbound/socks[socks-in]: inbound connection to 98.91.115.81:443
+INFO [456534351 11ms] outbound/vless[proxy]: outbound connection to 98.91.115.81:443
+INFO [456534351 1.2s] outbound/vless[proxy]: outbound connection to 98.91.115.81:443
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16003
+INFO sing-box started (0.166s)
+INFO [298575415 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:8802
+INFO [298575415 8ms] inbound/socks[socks-in]: inbound connection to 98.91.115.81:443
+INFO [298575415 8ms] outbound/vless[proxy]: outbound connection to 98.91.115.81:443
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16004
+INFO sing-box started (0.155s)
+INFO [3825371362 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:8822
+INFO [3825371362 7ms] inbound/socks[socks-in]: inbound connection to 98.91.115.81:443
+INFO [3825371362 7ms] outbound/vless[proxy]: outbound connection to 98.91.115.81:443
+INFO [3825371362 351ms] outbound/vless[proxy]: outbound connection to 98.91.115.81:443
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16005
+INFO sing-box started (0.144s)
+INFO [194974078 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:8837
+INFO [194974078 8ms] inbound/socks[socks-in]: inbound connection to 98.91.115.81:443
+INFO [194974078 8ms] outbound/vless[proxy]: outbound connection to 98.91.115.81:443
+INFO [194974078 12ms] outbound/vless[proxy]: outbound connection to 98.91.115.81:443
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16006
+INFO sing-box started (0.144s)
+INFO [3579656113 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:8852
+INFO [3579656113 8ms] inbound/socks[socks-in]: inbound connection to 98.91.115.81:443
+INFO [3579656113 9ms] outbound/vless[proxy]: outbound connection to 98.91.115.81:443
+ERROR [3579656113 1.2s] connection: open connection to 98.91.115.81:443 using outbound/vless[proxy]: unexpected HTTP response status: 403
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16007
+INFO sing-box started (0.188s)
+INFO [3778508271 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:8865
+INFO [3778508271 7ms] inbound/socks[socks-in]: inbound connection to 3.210.41.225:443
+INFO [3778508271 7ms] outbound/vless[proxy]: outbound connection to 3.210.41.225:443
+ERROR [3778508271 665ms] connection: open connection to 3.210.41.225:443 using outbound/vless[proxy]: unexpected HTTP response status: 403
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16008
+INFO sing-box started (0.155s)
+INFO [4103903705 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:8876
+INFO [4103903705 23ms] inbound/socks[socks-in]: inbound connection to 3.210.41.225:443
+INFO [4103903705 24ms] outbound/vless[proxy]: outbound connection to 3.210.41.225:443
+ERROR [4103903705 1.21s] connection: open connection to 3.210.41.225:443 using outbound/vless[proxy]: unexpected HTTP response status: 403
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16009
+INFO sing-box started (0.144s)
+INFO [1067718271 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:8889
+INFO [1067718271 14ms] inbound/socks[socks-in]: inbound connection to 3.210.41.225:443
+INFO [1067718271 14ms] outbound/vless[proxy]: outbound connection to 3.210.41.225:443
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16010
+INFO sing-box started (0.166s)
+INFO [472668182 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:8914
+INFO [472668182 2ms] inbound/socks[socks-in]: inbound connection to 3.210.41.225:443
+INFO [472668182 2ms] outbound/vless[proxy]: outbound connection to 3.210.41.225:443
+INFO [472668182 4.50s] outbound/vless[proxy]: outbound connection to 3.210.41.225:443
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16011
+INFO sing-box started (0.155s)
+INFO [1996504651 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:8936
+INFO [1996504651 5ms] inbound/socks[socks-in]: inbound connection to 3.210.41.225:443
+INFO [1996504651 5ms] outbound/vless[proxy]: outbound connection to 3.210.41.225:443
+INFO [1996504651 1.23s] outbound/vless[proxy]: outbound connection to 3.210.41.225:443
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16012
+INFO sing-box started (0.144s)
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16000
+INFO sing-box started (0.144s)
+INFO [460316808 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:11736
+INFO [460316808 56ms] inbound/socks[socks-in]: inbound connection to 8.47.69.0:443
+INFO [460316808 56ms] outbound/vless[proxy]: outbound connection to 8.47.69.0:443
+INFO [460316808 574ms] outbound/vless[proxy]: outbound connection to 8.47.69.0:443
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16001
+INFO sing-box started (0.155s)
+INFO [84012233 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:11753
+INFO [84012233 1ms] inbound/socks[socks-in]: inbound connection to 8.47.69.0:443
+INFO [84012233 1ms] outbound/vless[proxy]: outbound connection to 8.47.69.0:443
+INFO [84012233 295ms] outbound/vless[proxy]: outbound connection to 8.47.69.0:443
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16002
+INFO sing-box started (0.144s)
+INFO [1776620092 0ms] inbound/socks[socks-in]: inbound connection from 127.0.0.1:11768
+INFO [1776620092 15ms] inbound/socks[socks-in]: inbound connection to 8.47.69.0:443
+INFO [1776620092 15ms] outbound/vless[proxy]: outbound connection to 8.47.69.0:443
+INFO [1776620092 1.35s] outbound/vless[proxy]: outbound connection to 8.47.69.0:443
+INFO network: updated default interface wlan1, index 3
+INFO inbound/socks[socks-in]: tcp server started at 127.0.0.1:16003
+INFO sing-box started (0.144s)

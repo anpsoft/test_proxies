@@ -1,0 +1,54 @@
+{
+  "log": {
+    "level": "info",
+    "output": "console"
+  },
+  "inbounds": [
+    {
+      "type": "socks",
+      "tag": "socks-in",
+      "listen": "127.0.0.1",
+      "listen_port": 16003,
+      "sniff": false
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "proxy",
+      "server": "192.76.160.201",
+      "server_port": 58591,
+      "uuid": "a887a4f7-228e-4900-8cfb-119209cd1b9d",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "tgju.org",
+        "insecure": false,
+        "reality": {
+          "enabled": true,
+          "public_key": "V_wKDwjR9mgwDKVBNYGDPL2-cdXP4pq1cCVUka6ZGQE",
+          "short_id": "b4fdd4191a9c9621"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "outbound": "proxy",
+        "inbound": [
+          "socks-in"
+        ]
+      }
+    ],
+    "final": "proxy"
+  }
+}
